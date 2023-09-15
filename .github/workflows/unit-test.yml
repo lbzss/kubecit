@@ -1,8 +1,7 @@
 name: Go package
 
 on:
-  pull_request:
-    types: [opened, reopened,synchronize]
+  push
 
 jobs:
   build:
@@ -15,6 +14,9 @@ jobs:
         uses: actions/setup-go@v4
         with:
           go-version: '1.21'
+          
+      - name: make
+        run: make init && make all
 
       - name: Build
         run: go build -v ./...
