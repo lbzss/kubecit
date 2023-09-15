@@ -24,8 +24,8 @@ jobs:
 
       - name: docker build
         run: |
-          docker build -t chaoyue/kubecit-service:${{env.IMAGE_VERSION}} -f ./Dockerfile .
+          docker build -t z627062293/kubecit-service:${{env.IMAGE_VERSION}} -f ./Dockerfile .
 
       - name: docker push
         run: |
-          docker push chaoyue/kubecit-service:${{env.IMAGE_VERSION}}
+          docker push z627062293/kubecit-service:${{env.IMAGE_VERSION}}
