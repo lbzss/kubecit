@@ -4,7 +4,7 @@ COPY . /src
 WORKDIR /src
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-		ca-certificates libprotobuf-dev protobuf-compiler
+		ca-certificates libprotobuf-dev protobuf-compiler \
         netbase \
         && rm -rf /var/lib/apt/lists/ \
         && apt-get autoremove -y && apt-get autoclean -y
