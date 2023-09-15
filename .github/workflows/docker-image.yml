@@ -1,11 +1,7 @@
 name: Docker
 
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - 'master'
-
+  push
 env:
   IMAGE_VERSION: latest
 
