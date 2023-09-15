@@ -16,8 +16,11 @@ jobs:
           go-version: '1.21'
           
       - name: make
-        run: make init && make all
-
+        run: make init
+        
+      - name: make
+        run: make all
+        
       - name: Build
         run: go build -v ./...
 
